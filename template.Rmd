@@ -9,9 +9,10 @@ library(tidyverse)
 ```{r}
 data("penguins", package = "palmerpenguins")
 
-
 ```
-
+The variables of the dataset are `r colnames(penguins)`. 
+The dataset has `r ncol(penguins)` columns and `r nrow(penguins)` rows. 
+The mean flipper length is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)`. 
 
 
 
