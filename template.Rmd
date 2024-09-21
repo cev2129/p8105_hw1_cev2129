@@ -6,13 +6,21 @@ output:  github_document
 ```{r setup, include = FALSE}
 library(tidyverse)
 ```
+#Question 1
 ```{r}
 data("penguins", package = "palmerpenguins")
-
 ```
 The variables of the dataset are `r colnames(penguins)`. 
 The dataset has `r ncol(penguins)` columns and `r nrow(penguins)` rows. 
-The mean flipper length is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)`. 
+The mean flipper length is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)`.  
+
+```{r}
+scatterplot <- ggplot(data = penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+print(scatterplot)
+
+ggsave("hw1_scatterplot.png", plot = scatterplot)
+```
 
 
 
