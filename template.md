@@ -1,4 +1,4 @@
-Simple document
+p8105_hw1_cev2129
 ================
 
 \#Question 1
@@ -65,7 +65,7 @@ mean(pull(hw1_df,vec_factor))
 mean(pull(hw1_df, norm_samp))
 ```
 
-    ## [1] 1.102634
+    ## [1] 1.414396
 
 ``` r
 mean(pull(hw1_df, norm_samp_pos))
@@ -95,7 +95,7 @@ as.numeric(pull(hw1_df, vec_factor))
     ##  [1] 2 3 1 2 3 1 2 3 1 2
 
 When converting the logical variable to numeric, it converts TRUE to 1
-and FALSE to 0 to facilitate calculating the mean.
+and FALSE to 0.
 
 When converting the character variable to numeric, I first have to
 convert it to a factor so that it can be converted to numeric. I notice
@@ -103,4 +103,7 @@ that each character value is assigned a number based on alphabetical
 order.
 
 When converting the factor variable to numeric, it assigns a number to
-each factor level
+each factor level.
+
+Now that these values are numeric, it will facilitate calculating their
+variable means as we can only calculate the mean of numeric values.
